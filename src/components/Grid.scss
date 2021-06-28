@@ -1,0 +1,25 @@
+@import "../sass/abstracts/mixins";
+
+.grid {
+
+
+  &__text {
+
+    &__title {
+      font-family: 'Fraunces';
+    }
+
+    &__paragraph {
+      color: #b8b8b8;
+    }
+  }
+
+  &__imageContainer {
+    
+
+    &__item {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

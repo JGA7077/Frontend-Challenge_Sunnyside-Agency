@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow";
+  font-size: 18px;
+}
+
+/* Header */
+header {
+  background-image: url("../assets/images/desktop/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+header .navbar {
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid red;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+header ul button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 21px;
+  margin-left: 1rem;
+  font-family: "Fraunces";
+  text-transform: uppercase;
+}
+header h1 {
+  font-family: "Fraunces";
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */

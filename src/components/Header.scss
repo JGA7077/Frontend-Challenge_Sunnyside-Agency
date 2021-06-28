@@ -1,0 +1,87 @@
+@import "../sass/abstracts/mixins";
+
+header {
+  @include bg-img('desktop/image-header.jpg');
+
+  height: 100vh;
+
+  .navbar {
+    @include container;
+    @include flex-between;
+  }
+
+  ul {
+    list-style: none;
+    @include flex-center;
+
+    li a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+    button {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 25px;
+      padding: 14px 21px;
+      margin-left: 1rem;
+      font-family: 'Fraunces';
+      text-transform: uppercase;
+    }
+  }
+
+  .header__title {
+    font-family: 'Fraunces';
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  nav #icon {
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+
+  @include mobile() {
+
+    @include bg-img('mobile/image-header.jpg');
+
+    nav {
+
+      ul {
+        position: fixed;
+        width: 100%;
+        min-height: 70vh;
+        background-color: #fff;
+        top: 75px;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        li a {
+          color: $darkBlue;
+        }
+
+        button {
+          background-color: $yellow;
+        }
+      }
+
+      .navbar__menu--show {
+        left: 0;
+      }
+
+      #icon {
+        display: block;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,33 @@
+@import 'variables';
+
+@mixin container {
+  max-width: $container-width;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bg-img($img) {
+  background-image: url('../../assets/images/#{$img}');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin mobile() {
+  @media(max-width: 768px) {
+    @content
+  }
+}
+  
