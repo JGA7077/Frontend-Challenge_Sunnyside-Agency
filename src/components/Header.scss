@@ -1,23 +1,54 @@
 @import "../sass/abstracts/mixins";
 
 header {
-  @include bg-img('desktop/image-header.jpg');
+  @include bg-img("desktop/image-header.jpg");
 
   height: 100vh;
+  position: relative;
 
   .navbar {
     @include container;
     @include flex-between;
   }
 
+  @include mobile() {
+    @include bg-img("mobile/image-header.jpg");
+
+    nav {
+      .navbar__menu--show {
+        left: 0;
+        z-index: 1;
+        @include menuAnimation;
+      }
+    }
+
+  }
+
   ul {
     list-style: none;
     @include flex-center;
+
+    @include mobile() {
+      position: fixed;
+      width: 100%;
+      min-height: 70vh;
+      background-color: #fff;
+      top: 75px;
+      left: -100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      @include menuAnimation;
+    }
 
     li a {
       color: #fff;
       text-decoration: none;
       margin: 0 1rem;
+
+      @include mobile() {
+        color: $darkBlue;
+      }
     }
 
     button {
@@ -27,13 +58,17 @@ header {
       border-radius: 25px;
       padding: 14px 21px;
       margin-left: 1rem;
-      font-family: 'Fraunces';
+      font-family: "Fraunces";
       text-transform: uppercase;
+
+      @include mobile() {
+        background-color: $yellow;
+      }
     }
   }
 
   .header__title {
-    font-family: 'Fraunces';
+    font-family: "Fraunces";
     text-transform: uppercase;
     color: #fff;
     text-align: center;
@@ -44,44 +79,20 @@ header {
     color: white;
     cursor: pointer;
     display: none;
-  }
 
-  @include mobile() {
-
-    @include bg-img('mobile/image-header.jpg');
-
-    nav {
-
-      ul {
-        position: fixed;
-        width: 100%;
-        min-height: 70vh;
-        background-color: #fff;
-        top: 75px;
-        left: -100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        li a {
-          color: $darkBlue;
-        }
-
-        button {
-          background-color: $yellow;
-        }
-      }
-
-      .navbar__menu--show {
-        left: 0;
-      }
-
-      #icon {
-        display: block;
-      }
-
+    @include mobile() {
+      display: block;
     }
-
   }
 
+  .header__img {
+    position: absolute;
+    left: 49vw;
+    bottom: 39%;
+    z-index: 0;
+
+    @include mobile() {
+      bottom: 28%;
+    }
+  }
 }

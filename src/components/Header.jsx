@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/images/logo.svg'
+import arrow from '../assets/images/icon-arrow-down.svg'
 import './Header.scss'
 
 
@@ -30,6 +31,7 @@ export default function Header() {
       </nav>
 
       <h1 className="header__title">We are creatives</h1>
+      <img src={arrow} alt="Arrow icon" className="header__img" />
 
     </header>
   )
