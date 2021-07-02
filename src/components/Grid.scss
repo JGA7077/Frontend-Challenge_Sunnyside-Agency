@@ -1,25 +1,137 @@
 @import "../sass/abstracts/mixins";
 
 .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(3, 560px);
 
+  @include mobile() {
+    grid-template-columns: 100%;
+  }
 
   &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0px 100px;
+    background-color: #fffbf8;
+
+    @include mobile() {
+      padding: 0px 20px;
+      text-align: center;
+      align-items: center;
+      height: 100vh;
+    }
 
     &__title {
       font-family: 'Fraunces';
+      color: #27333f;
+      font-size: 2rem;
+
+      @include mobile() {
+        font-size: 1.7rem;
+      }
     }
 
     &__paragraph {
-      color: #b8b8b8;
+      color: #85848c;
+      margin: 20px 0;
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
+
+    &__paragraph--yellow {
+      text-align: center;
+      color: #242b35;
+      border-bottom: 5px solid rgba($yellow, .5);
+      border-radius: 5px;
+
+      &:hover {
+        border-color: rgba($yellow, 1.0);
+      }
+    }
+
+    &__paragraph--pink {
+      display: inline-block;
+      color: #242b35;
+      border-bottom: 5px solid rgba($softRed, .5);
+      border-radius: 5px;
+
+      &:hover {
+        border-color: rgba($softRed, 1.0);
+      }
     }
   }
 
-  &__imageContainer {
+  &__eggBackground {
     
+    @include bg-img('desktop/image-transform.jpg');
+    background-size: cover;
 
-    &__item {
-      width: 100%;
-      height: auto;
+  }
+
+  &__cupBackground {
+    
+    @include bg-img('desktop/image-stand-out.jpg');
+    background-size: cover;
+
+  }
+
+  &__textImage {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 0px 100px;
+
+    @include mobile() {
+      padding: 500px 10px 0px 10px;
+      height: 100vh;
+    }
+
+    &__title {
+      font-family: 'Fraunces';
+      font-size: 2rem;
+
+      @include mobile() {
+        font-size: 1.7rem;
+      }
+    }
+
+    &__paragraph {
+      margin: 10px 0 50px 0;
+      font-size: 1.2rem;
+      line-height: 1.3rem;
+
+      @include mobile() {
+        font-size: 0.9rem;
+      }
+    }
+
+
+    &--cherry {
+      color: $cyanDesign;
+      @include bg-img('desktop/image-graphic-design.jpg');
+
+      @include mobile() {
+        @include bg-img('mobile/image-graphic-design.jpg');
+        background-size: cover;
+      }
+
+    }
+
+    &--orange {
+      color: $bluePhotograph;
+      @include bg-img('desktop/image-photography.jpg');
+
+      @include mobile() {
+        @include bg-img('mobile/image-photography.jpg');
+      }
+      
     }
   }
+
 }

@@ -1,7 +1,5 @@
 import React from 'react'
 import './Grid.scss'
-import eggImage from '../assets/images/desktop/image-transform.jpg'
-import cupImage from '../assets/images/desktop/image-stand-out.jpg'
 
 export default function Grid() {
   return (
@@ -16,12 +14,12 @@ export default function Grid() {
         <p className="grid__text__paragraph--yellow">Learn More</p>
       </div>
 
-      <div className="grid__imageContainer">
-        <img src={eggImage} alt="Egg" className="grid__imageContainer__item" />
+      <div className="grid__eggBackground">
+        
       </div>
 
-      <div className="grid__imageContainer">
-        <img src={cupImage} alt="Cup" className="grid__imageContainer__item" />
+      <div className="grid__cupBackground">
+    
       </div>
 
       <div className="grid__text">
@@ -32,14 +30,14 @@ export default function Grid() {
         <p className="grid__text__paragraph--pink">Learn More</p>
       </div>
 
-      <div className="grid__textImage--cherry">
+      <div className="grid__textImage grid__textImage--cherry">
         <h2 className="grid__textImage__title">Graphic Design</h2>
         <p className="grid__textImage__paragraph">
           Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
         </p>
       </div>
 
-      <div className="grid__textImage--orange">
+      <div className="grid__textImage grid__textImage--orange">
         <h2 className="grid__textImage__title">Photography</h2>
         <p className="grid__textImage__paragraph">
           Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
