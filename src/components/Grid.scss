@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: start;
     padding: 0px 100px;
-    background-color: white;
+    background-color: $light;
 
     @include mobile() {
       padding: 0px 20px;
