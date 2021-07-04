@@ -1,0 +1,100 @@
+@import "../sass/abstracts/mixins";
+
+.footer {
+  background-color: $cyanFooter;
+  text-align: center;
+
+  & a {
+    color: $cyanDesign;
+    transition: 100ms;
+
+    &:hover {
+      color: $bluePhotograph;
+      border-bottom: 2px solid $bluePhotograph;
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 450px;
+
+    @include mobile() {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 250px);
+    }
+
+    &--milk {
+      @include bg-img("desktop/image-gallery-milkbottles.jpg");
+      background-size: cover;
+    }
+
+    &--orange {
+      @include bg-img("desktop/image-gallery-orange.jpg");
+      background-size: cover;
+    }
+
+    &--cone {
+      @include bg-img("desktop/image-gallery-cone.jpg");
+      background-size: cover;
+    }
+
+    &--sugar {
+      @include bg-img("desktop/image-gallery-sugarcubes.jpg");
+      background-size: cover;
+    }
+  }
+
+  &__bottom {
+    padding: 70px 0;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+
+    &__nav {
+      @include flex-center();
+      padding: 45px 0px 90px 0;
+      list-style: none;
+
+      &__item {
+        margin: 0 30px;
+      }
+    }
+
+    &__contacts {
+      @include flex-center();
+      list-style: none;
+
+      &__item {
+        margin: 0 15px;
+
+        & a {
+          padding: 3px;
+
+          &:hover {
+            color: $bluePhotograph;
+            border: 2px solid $bluePhotograph;
+            border-radius: 25%;
+          }
+        }
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 20px;
+
+    @include mobile() {
+      @include flex-center();
+      flex-direction: column;
+    }
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+    margin: 0 15px;
+  }
+}

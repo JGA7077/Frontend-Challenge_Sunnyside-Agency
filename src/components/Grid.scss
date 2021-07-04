@@ -4,9 +4,12 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(3, 560px);
+  grid-template-areas: "firstText egg" "cup secondText" "design photography";
 
   @include mobile() {
     grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 100vh);
+    grid-template-areas: "egg" "firstText" "cup" "secondText" "design" "photography";
   }
 
   &__text {
@@ -14,18 +17,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 0px 100px;
+    padding: 0 100px;
     background-color: $light;
 
     @include mobile() {
       padding: 0px 20px;
       text-align: center;
+      justify-content: center;
       align-items: center;
       height: 100vh;
     }
 
+    &--first {
+      grid-area: firstText;
+    }
+
+    &--second {
+      grid-area: secondText;
+    }
+
     &__title {
-      font-family: 'Fraunces';
+      font-family: "Fraunces";
       color: $darkBlue;
       font-size: 2rem;
 
@@ -41,45 +53,40 @@
       line-height: 1.3rem;
     }
 
-    &__paragraph--yellow {
-      text-align: center;
+    &__link--yellow {
       color: $darkBlue;
-      border-bottom: 5px solid rgba($yellow, .5);
+      border-bottom: 5px solid rgba($yellow, 0.5);
       border-radius: 5px;
 
       &:hover {
-        border-color: rgba($yellow, 1.0);
+        border-color: rgba($yellow, 1);
       }
     }
 
-    &__paragraph--pink {
-      display: inline-block;
+    &__link--pink {
       color: $darkBlue;
-      border-bottom: 5px solid rgba($softRed, .5);
+      border-bottom: 5px solid rgba($softRed, 0.5);
       border-radius: 5px;
 
       &:hover {
-        border-color: rgba($softRed, 1.0);
+        border-color: rgba($softRed, 1);
       }
     }
   }
 
   &__eggBackground {
-    
-    @include bg-img('desktop/image-transform.jpg');
+    @include bg-img("desktop/image-transform.jpg");
     background-size: cover;
-
+    grid-area: egg;
   }
 
   &__cupBackground {
-    
-    @include bg-img('desktop/image-stand-out.jpg');
+    @include bg-img("desktop/image-stand-out.jpg");
     background-size: cover;
-
+    grid-area: cup;
   }
 
   &__textImage {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -93,7 +100,7 @@
     }
 
     &__title {
-      font-family: 'Fraunces';
+      font-family: "Fraunces";
       font-size: 2rem;
 
       @include mobile() {
@@ -111,27 +118,25 @@
       }
     }
 
-
-    &--cherry {
+    &__cherry {
       color: $cyanDesign;
-      @include bg-img('desktop/image-graphic-design.jpg');
+      @include bg-img("desktop/image-graphic-design.jpg");
+      grid-area: design;
 
       @include mobile() {
-        @include bg-img('mobile/image-graphic-design.jpg');
+        @include bg-img("mobile/image-graphic-design.jpg");
         background-size: cover;
       }
-
     }
 
-    &--orange {
+    &__orange {
       color: $bluePhotograph;
-      @include bg-img('desktop/image-photography.jpg');
+      @include bg-img("desktop/image-photography.jpg");
+      grid-area: photography;
 
       @include mobile() {
-        @include bg-img('mobile/image-photography.jpg');
+        @include bg-img("mobile/image-photography.jpg");
       }
-      
     }
   }
-
 }

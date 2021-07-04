@@ -1,6 +1,6 @@
 // @import "./abstracts/mixins";
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Fraunces:wght@700;900&display=swap');
 
 * {
   margin: 0;
@@ -10,7 +10,6 @@
   font-size: 18px;
 }
 
-/* Footer */
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+a {
+  text-decoration: none;
+}
