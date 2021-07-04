@@ -13,7 +13,7 @@ Este desafio consiste em construir a Landing Page sugerida e fazer com que pare�
 - React
 - SASS
 
-![Visualização do design para o desafio - Desktop.](.design/desktop-design.jpg)
+![Visualização do design para o desafio - Desktop.](./design/desktop-design.jpg)
 
-![Visualização do design para o desafio - Mobile.](.design/mobile-design.jpg)
+![Visualização do design para o desafio - Mobile.](./design/mobile-design.jpg)
 
