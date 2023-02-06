@@ -20,9 +20,9 @@ export default function Header() {
         <img src={logo} alt="Sunnyside Logo" className="navbar__logo" />
 
         <ul className={isActive ? null : "navbar__menu--show"}>
-          <li><a href="../index.js">About</a></li>
-          <li><a href="../index.js">Services</a></li>
-          <li><a href="../index.js">Projects</a></li>
+        <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
           <button>Contact</button>
         </ul>
         <div id="icon" onClick={showMenu}>
